@@ -1,0 +1,18 @@
+@inject NavigationManager NavigationManager
+
+@page "/components"
+
+<div>
+    <h1>
+        Components
+    </h1>
+    
+</div>
+<button @onclick="Goto">Ìø×ªµ½Ê×Ò³</button>
+@code
+{
+    private void Goto()
+    {
+        NavigationManager.NavigateTo("/");
+    }
+}
