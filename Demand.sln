@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33209.295
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demand", "Demand\Demand.csproj", "{7B874E4D-3E17-4171-9908-FE342851585D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demand", "Demand\Demand.csproj", "{7B874E4D-3E17-4171-9908-FE342851585D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demand.Components", "Demand.Components\Demand.Components.csproj", "{893FD2BA-90D8-4873-8AA1-4F26D452FF28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demand.Components", "Demand.Components\Demand.Components.csproj", "{893FD2BA-90D8-4873-8AA1-4F26D452FF28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
