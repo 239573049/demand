@@ -350,7 +350,26 @@ server {
 
 打开浏览器访问`http://127.0.0.1:811/` (不要使用localhost访问，默认不会启动压缩的)然后打开f12调试工具，并且在应用程序中清理掉存储，在打开网络选项，刷新浏览器，加载完成，优化到了2.3MB,启动压缩，并且在发布的时候裁剪了未使用的程序集：
 ![输入图片说明](https://foruda.gitee.com/images/1675065598192463678/bcec281c_8229157.png "屏幕截图")
+## 极致优化 到1MB
 
+在`Demand`项目文件中添加以下配置,以下配置禁用了一些功能，比如全球化等
+
+```
+<PublishTrimmed>true</PublishTrimmed>
+<InvariantGlobalization>true</InvariantGlobalization>
+<BlazorEnableTimeZoneSupport>false</BlazorEnableTimeZoneSupport>
+<EventSourceSupport>false</EventSourceSupport>
+<HttpActivityPropagationSupport>false</HttpActivityPropagationSupport>
+<EnableUnsafeBinaryFormatterSerialization>false</EnableUnsafeBinaryFormatterSerialization>
+<MetadataUpdaterSupport>false</MetadataUpdaterSupport>
+<UseNativeHttpHandler>true</UseNativeHttpHandler>
+```
+
+然后我们继续上面的操作将其发布，并且部署到nginx中
+
+在网络中查看加载大小，我们看到已经来到了1MB，去掉一些js其实应该更小，这样它的加载问题得到了很大的解决（来着[小夜鲲](https://home.cnblogs.com/u/sayokun/)大佬的建议）
+
+![输入图片说明](image.png)
 
 ## 结尾
 
